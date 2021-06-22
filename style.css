@@ -1,0 +1,233 @@
+:root {
+  --one: #feffff;
+  --two: #def2f1;
+  --three: #3aafa9;
+  --four: #2b7a78;
+  --five: #17252a;
+}
+
+* {
+  margin: 0;
+  color: var(--five);
+  font-family: "Courier New", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.main-container {
+  height: 300vh;
+}
+
+.home-page {
+  height: 100vh;
+  background-color: var(--three);
+}
+
+.nav-bar {
+  position: fixed;
+  margin-left: 10%;
+  margin-top: 2%;
+  z-index: 1;
+}
+
+.nav-bar ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  justify-content: flex-start;
+}
+
+.nav-bar a {
+  display: block;
+  text-align: center;
+  padding: 5px 12px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+button {
+  position: relative;
+  padding: 10px 25px;
+  background-color: var(--five);
+  color: var(--one);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--four);
+}
+
+.nav-bar a:hover {
+  color: var(--one);
+}
+
+.post-box {
+  position: relative;
+  width: 90%;
+  height: 85%;
+  top: 10%;
+  left: 5%;
+  background-color: var(--two);
+}
+
+.post-box-container {
+  width: 15%;
+  height: 15%;
+  box-sizing: border-box;
+  position: absolute;
+  background-color: var(--four);
+  border: 2px solid var(--five);
+}
+
+.delete-button {
+  background-color: var(--five);
+  color: var(--two);
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.post-text-popup {
+  position: absolute;
+  width: 100%;
+  height: 300vh;
+  top: 0;
+  display: none;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.post-text-popup textarea {
+  position: fixed;
+  top: 35%;
+  left: 40%;
+  width: 20%;
+  height: 20%;
+  resize: none;
+  border: 2px solid var(--five);
+}
+
+.contact-card-container {
+  position: absolute;
+  width: 100%;
+  height: 300vh;
+  top: 0;
+  display: none;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.contact-card {
+  position: fixed;
+  width: 15%;
+  height: 50%;
+  top: 25%;
+  left: 40%;
+  box-sizing: border-box;
+  border: 2px solid black;
+  background-color: var(--five);
+  text-align: center;
+}
+
+.contact-card > * {
+  margin-bottom: 5px;
+  color: var(--one);
+}
+
+.contact-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.fa {
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 50%;
+  background-color: var(--three);
+  color: var(--one);
+}
+
+.fa:hover {
+  background-color: green;
+}
+
+.about-page {
+  height: 100vh;
+  background-color: var(--two);
+}
+
+.about-page div > * {
+  text-align: center;
+}
+
+.about-panel {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  top: 25%;
+  left: 20%;
+  width: 60%;
+  height: 50%;
+  border: 30px solid var(--four);
+  background-color: var(--five);
+}
+
+.about-panel div {
+  width: 45%;
+  font-size: 1em;
+  background-color: var(--three);
+  margin: 50px;
+}
+
+.about-panel div h1 {
+  color: var(--two);
+}
+
+.about-panel div p {
+  color: var(--two);
+}
+
+.about-panel img {
+  width: 45%;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.resources-page {
+  height: 100vh;
+  background-color: var(--five);
+}
+
+.resource-panel {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  top: 25%;
+  left: 20%;
+  width: 60%;
+  height: 50%;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.resource-text-container div {
+  height: 45%;
+  border: 2px solid black;
+}
+
+.resource-panel img {
+  border: 2px solid black;
+  width: 45%;
+}
