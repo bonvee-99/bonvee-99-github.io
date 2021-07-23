@@ -1,0 +1,354 @@
+:root {
+  --one: #feffff;
+  --two: #def2f1;
+  --three: #3aafa9;
+  --four: #2b7a78;
+  --five: #17252a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--five);
+  scroll-behavior: smooth;
+  font-family: "Courier New", monospace;
+}
+
+/* NAV */
+
+nav {
+  position: relative;
+  top: 0;
+  background-color: var(--three);
+  z-index: 1;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+@keyframes hideNavbar {
+  from {
+    width: 100%;
+    max-height: 1000px;
+    background-color: var(--three);
+  }
+  to {
+    width: 0;
+    max-height: 2em;
+    background-color: var(--one);
+  }
+}
+
+@keyframes showNavbar {
+  from {
+    width: 0;
+    max-height: 2em;
+    background-color: var(--one);
+  }
+  to {
+    width: 100%;
+    max-height: 1000px;
+    background-color: var(--three);
+  }
+}
+
+.hide-nav {
+  animation: hideNavbar 2s;
+  animation-fill-mode: forwards;
+}
+
+.show-nav {
+  animation: showNavbar 2s;
+  animation-fill-mode: forwards;
+}
+
+nav li {
+  padding: 1em;
+  font-size: 1.5rem;
+}
+
+nav li a {
+  padding: 0.5em;
+  text-decoration: none;
+  border-bottom: 1px solid black;
+}
+
+nav li a:hover {
+  color: var(--one);
+  border-color: var(--one);
+}
+
+button {
+  padding: 0.5em;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.25rem;
+  background-color: var(--five);
+  color: var(--one);
+}
+
+button:hover {
+  background-color: var(--four);
+}
+
+#hamburger {
+  position: absolute;
+  top: 0.25em;
+  right: 0.5em;
+  width: 2em;
+}
+
+@keyframes hideNavBar {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    width: 3em;
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+#hamburger:active,
+#hamburger:hover {
+  animation: hideNavBar 1s;
+}
+
+#hamburger > * {
+  width: 100%;
+  height: 0.25em;
+  background-color: black;
+  margin: 0.25em 0;
+}
+
+/* Posting */
+
+.post-box {
+  background-color: white;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.post-text-popup-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  display: none;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.post-text-popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 25%;
+  height: 25%;
+}
+
+.post-text-popup textarea {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  display: inline;
+}
+
+.post-text-popup button {
+  position: absolute;
+  right: 0;
+  font-size: 1rem;
+  background-color: var(--three);
+}
+
+.post-box-container {
+  width: 15%;
+  height: 15%;
+  position: absolute;
+  border: 2px solid var(--five);
+  color: var(--one);
+  background-color: var(--four);
+  overflow-wrap: break-word;
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-size: 1rem;
+}
+
+.delete-button {
+  position: absolute;
+  bottom: 0;
+  right: -1.75em;
+  font-size: 0.75rem;
+}
+
+/* Contact Card */
+
+.contact-card-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  display: none;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.contact-card {
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  width: 40%;
+  height: auto;
+  background-color: var(--five);
+  text-align: center;
+}
+
+.contact-card > * {
+  margin-bottom: 5px;
+  color: var(--one);
+  overflow-wrap: break-word;
+}
+
+.contact-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.fa {
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 50%;
+  background-color: var(--three);
+  color: var(--one);
+}
+
+.fa:hover {
+  background-color: green;
+}
+
+/* About Panel */
+
+.about-page {
+  background-color: var(--two);
+}
+
+.about-panel {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 80%;
+  padding: 10em 3em;
+}
+
+.about-panel img {
+  max-width: 100%;
+  margin: auto 0;
+}
+
+.about-panel div {
+  background-color: var(--five);
+  text-align: center;
+  width: 100%;
+}
+
+.about-panel div > * {
+  color: var(--one);
+  padding: 1em;
+}
+
+/* Resources Page */
+
+.resource-page {
+  background-color: var(--five);
+}
+
+.resource-panel {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10em 1em;
+}
+
+.resource-panel div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.resource-panel div > * {
+  color: var(--five);
+  text-align: center;
+  background-color: var(--two);
+  padding: 1.5em;
+  margin: 1em 0;
+}
+
+.resource-panel img {
+  max-width: 100%;
+  margin: auto 0;
+}
+
+/* Responsive */
+
+@media (min-width: 775px) {
+  nav ul {
+    flex-direction: row;
+  }
+
+  nav {
+    position: sticky;
+  }
+
+  .about-panel {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .about-panel div {
+    width: 45%;
+    align-items: center;
+  }
+
+  .about-panel img {
+    max-width: 45%;
+  }
+
+  .resource-panel {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .resource-panel div {
+    width: 45%;
+  }
+
+  .resource-panel img {
+    max-width: 45%;
+  }
+
+  .contact-card {
+    left: 40%;
+    width: 20%;
+    height: auto;
+  }
+}

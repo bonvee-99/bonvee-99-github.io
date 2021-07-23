@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Website</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+	<div id="home">
+		<nav id="nav">
+			<ul id="nav-list">
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#resources">Resources</a></li>
+				<li><button onclick="contact()">Contact</button></li>
+				<li><button onclick="post()">Post</button></li>
+			</ul>
+
+			<div id="hamburger" onclick="toggleNavBar()">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+
+		</nav>
+		<div class="post-box" id="post"></div>
+	<div/>
+
+	<div class="post-text-popup-container" id="post-text" onclick="hidePopUp()">
+		<div class="post-text-popup">
+			<textarea id="text" onclick="event.stopPropagation()">
+
+			</textarea>
+			<button onclick="addPostBox()">Post</button>
+		</div>
+		
+	</div>
+
+	<div class="about-page" id="about">
+		<div class="about-panel">
+			<img src="photos/schizophrenia-symptoms.png" alt="schizophrenia symptoms">
+			<div>
+				<h1>ABOUT</h1>
+				<p>This website was created by a UBC Brain and Cognition student. It was created for a way for people to gain a better understanding of what exactly schizophrenia is as well as people with the disorder to post and see
+					what other people with the same condition are experiencing. Using this site will hope to provide comfort and a sense of support to each user. Post experiences you have had and see other people's. 
+				</p>
+			</div>
+
+		</div>
+	</div>
+
+	
+
+	<div class="contact-card-container" id="contact-popup" onclick="hideContactCard();">
+		<div class="contact-card" onclick="event.stopPropagation()">
+			<img src="./photos/ben-lucy.jpg" alt="ben and lucy">
+			<h1 onclick="sayHi(this)">Ben Vinnick</h1>
+			<p>University of British Columbia</p>
+			<a href="https://www.facebook.com/profile.php?id=100008645227255" class="fa fa-facebook"
+				target="_blank" rel="noreferrer noopener"></a>
+			<a href="https://www.instagram.com/benvinnick_" target="_blank"
+				rel="noreferrer noopener" class="fa fa-instagram"></a>
+			<a href="mailto:benvinnick@gmail.com" target="_blank" rel="noreferrer noopener"
+				class="fa fa-google"></a>
+		</div>
+
+	</div>
+
+	<div class="resource-page" id="resources">
+		<div class="resource-panel">
+			<div>
+				<p>Never be afraid to reach out to someone. Ask for a friend, family member, or call a helpline. <br> 1-888-993-3112</p>
+				<p>Other resources:
+					<br>
+					<a href="https://www.psychiatry.org/patients-families/schizophrenia" target="_blank">Help With Schizophrenia</a>
+					<br>
+					<a href="https://www.heretohelp.bc.ca/infosheet/schizophrenia" target="_blank">Here To Help</a>
+				</p>
+			</div>
+			<img src="photos/schizophrenia-coping.png" alt="schizophrenia social strategies">
+		</div>
+	</div>
+
+
+
+	<script src="script.js">
+
+	</script>
+
+
+
+
+</body>
+
+</html>
+
