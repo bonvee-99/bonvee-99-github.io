@@ -4,7 +4,7 @@ let currentPosts = [];
 
 let unusedPosts = [];
 
-const LIMIT = 3;
+const LIMIT = 15;
 
 const BOXSIZE = 10;
 const SPACING = 5;
@@ -13,21 +13,22 @@ const TIME = 5000;
 
 function post() {
 	document.getElementById('post-text').style.display = "block";
- 	document.body.scrollTop = 0; // For Safari
-  	document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+	document.body.style.overflow = "hidden";
+	document.body.scrollTop = 0; // For Safari
+	document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+ 	
 }
 
 function hidePopUp() {
 	document.getElementById('post-text').style.display = "none";
 	document.getElementById("text").value = "";
-}
-
-function overlap(position) {
-	return false;
+	document.body.style.overflow = "visible";
 }
 
 function contact() {
 	document.getElementById('contact-popup').style.display = "block";
+	document.body.scrollTop = 0; // For Safari
+	document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Oper
 }
 
 function hideContactCard() {
@@ -41,7 +42,7 @@ function addPostBox() {
 		box.classList.add("post-box-container");
 
 			
-		let deleteButton = document.createElement("div");
+		let deleteButton = document.createElement("button");
 		deleteButton.classList.add("delete-button");
 		deleteButton.addEventListener("click", removePost);
 		let deleteText = document.createTextNode("x");
@@ -67,7 +68,7 @@ function addPostBox() {
 
 
 function getCoordinates() {
-	let xPos = Math.round(Math.random() * (84 - 1) + 1);
+	let xPos = Math.round(Math.random() * (79 - 1) + 1);
 	let yPos = Math.round(Math.random() * (84 - 1) + 1);
 	var position = {x: xPos, y: yPos};
 	if (!isOverlapping(position)) {
@@ -163,4 +164,35 @@ function findIndexOfPosition(position) {
 setInterval(switchPosts, TIME);
 
 
+window.addEventListener("scroll", checkScroll);
 
+function checkScroll() {
+	if (window.scrollY >= window.innerHeight * 2) {
+		document.getElementById("nav").style.backgroundColor = "#3aafa9"
+	} else {
+		document.getElementById("nav").style.backgroundColor = "";
+	}
+}
+
+let hidden = false;
+
+function toggleNavBar() {
+
+	if (hidden == false) {
+
+		document.getElementById("nav-list").classList.remove("show-nav");
+
+		document.getElementById("nav-list").classList.add("hide-nav");
+
+		hidden = true;
+
+	} else {
+		document.getElementById("nav-list").classList.remove("hide-nav");
+
+		document.getElementById("nav-list").classList.add("show-nav");
+
+		hidden = false;
+	}
+
+	
+}

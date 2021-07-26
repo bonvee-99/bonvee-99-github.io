@@ -1,86 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Website</title>
 	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
+
 <body>
-	<div class="main-container">
-		<div class="home-page" id="home">
-			<nav class="nav-bar">
-				<ul>
-					<li><a href="#home">Home</a></li>
-         				<li><a href="#about">About</a></li>
-         				<li><a href="#resources">Resources</a></li>
-          				<li><button onclick="contact()">Contact</button></li>
-					<li><button onclick="post()">Post</button></li>
-				</ul>
-				
-			</nav>
-			<div class="post-box" id="post"></div>
-		</div>
+	<div id="home">
+		<nav id="nav">
+			<ul id="nav-list">
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#resources">Resources</a></li>
+				<li><button onclick="contact()">Contact</button></li>
+				<li><button onclick="post()">Post</button></li>
+			</ul>
 
-		<div class="about-page" id="about">
-			<div class="about-panel">
-				<img src="photos\schizophrenia-symptoms.png" alt="hi">
-				<div>
-					<h1>About the Site</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-       					do eiusmod tempor incididunt ut labore et dolore magna aliqua. U
-            				t enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-             				nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-             				reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-              				pariatur. Excepteur sint occaecat cupidat at non proident, sunt in m.
-         				</p>
-				</div>
-					
+			<div id="hamburger" onclick="toggleNavBar()">
+				<div></div>
+				<div></div>
+				<div></div>
 			</div>
-		</div>
 
-		<div class="post-text-popup" id="post-text" onclick="hidePopUp()">
+		</nav>
+		<div class="post-box" id="post"></div>
+	<div/>
+
+	<div class="post-text-popup-container" id="post-text" onclick="hidePopUp()">
+		<div class="post-text-popup">
 			<textarea id="text" onclick="event.stopPropagation()">
-			
-			</textarea>
-			<button onclick="addPostBox()" style="position: fixed; left: 57%; top: 30%;">Post</button>
-		</div>
 
-		<div class="contact-card-container" id="contact-popup" onclick="hideContactCard();">
-			<div class="contact-card" onclick="event.stopPropagation()">
-				<img src="./photos/ben-lucy.jpg" alt="ben and lucy">
-				<h1 onclick="sayHi(this)">Ben Vinnick</h1>
-				<p>University of British Columbia</p>
-				<a href="https://www.facebook.com/profile.php?id=100008645227255" class="fa fa-facebook" target="_blank" rel="noreferrer noopener"></a>
-				<a href="https://www.instagram.com/benvinnick_" target="_blank" rel="noreferrer noopener" class="fa fa-instagram"></a>
-				<a href="mailto:benvinnick@gmail.com" target="_blank" rel="noreferrer noopener" class="fa fa-google"></a>
-			</div>
-	
+			</textarea>
+			<button onclick="addPostBox()">Post</button>asdf
 		</div>
 		
-		<div class="resources-page" id="resources">
-			<div class="resource-panel">
-				<div class="resource-text-container">
-					<div>hi 1 there</div>
-           				<div>hi 2</div>
-				</div>
-				<img alt="other">
-			</div>
+	</div>
+
+	<div class="contact-card-container" id="contact-popup" onclick="hideContactCard();">
+		<div class="contact-card" onclick="event.stopPropagation()">
+			<img src="./photos/ben-lucy.jpg" alt="ben and lucy">
+			<h1 onclick="sayHi(this)">Ben Vinnick</h1>
+			<p>University of British Columbia</p>
+			<a href="https://www.facebook.com/profile.php?id=100008645227255" class="fa fa-facebook"
+				target="_blank" rel="noreferrer noopener"></a>
+			<a href="https://www.instagram.com/benvinnick_" target="_blank"
+				rel="noreferrer noopener" class="fa fa-instagram"></a>
+			<a href="mailto:benvinnick@gmail.com" target="_blank" rel="noreferrer noopener"
+				class="fa fa-google"></a>
 		</div>
-		
 
 	</div>
 
+	<div class="about-page" id="about">
+		<div class="about-panel">
+			<img src="photos/schizophrenia-symptoms.png" alt="schizophrenia symptoms">
+			<div>
+				<h1>ABOUT</h1>
+				<p>This website was created as a way for people to gain a better understanding of what exactly schizophrenia is as well as people with the disorder to post and see
+					what other people with the same condition are experiencing. Using this site will hope to provide comfort and a sense of support to each user.
+				</p>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="resource-page" id="resources">
+		<div class="resource-panel">
+			<div>
+				<p>hi 2 therasdfasdf asdf asdf asdf asdf asdf asdf asdf asdf e</p>
+				<p>hi 3 asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf sdf </p>
+			</div>
+			<img src="photos/schizophrenia-coping.png" alt="schizophrenia social strategies">
+		</div>
+	</div>
+
+
+
 	<script src="script.js">
-		
+
 	</script>
 
 
 
-	
+
 </body>
+
 </html>
-		
